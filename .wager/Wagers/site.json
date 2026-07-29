@@ -1,0 +1,10 @@
+{
+  "description": "Wager Stream is an  online gaming and betting experience, offering users easy navigation, real-time updates on big wins, and engaging promotional features.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

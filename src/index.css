@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Barlow Condensed', system-ui, -apple-system, sans-serif;
+  --color-neon: #80EF80;
+  --color-neon-dark: #5bc85b;
+  --color-base: #0f1115;
+  --color-surface: #3b4148;
+  --color-elevated: #444b52;
+  --color-dim: #8892a4;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 50s linear infinite;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .hero-heading {
+    font-size: 1.25rem; /* Mobile size */
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-heading {
+      font-size: 3.5rem; /* Laptop/Desktop size */
+      line-height: 1.1;
+    }
+  }
+}
+
+@layer utilities {
+  .advanced-nav-bar {
+    background: rgba(24, 27, 32, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-item-active {
+    color: #24EE89 !important;
+    text-shadow: 0 0 12px rgba(36, 238, 137, 0.4);
+  }
+}
