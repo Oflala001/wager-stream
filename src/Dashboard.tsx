@@ -349,7 +349,7 @@ export default function Dashboard({ onDeposit, onLogout, username = 'Player' }: 
 
     try {
       // ── Replace this URL with your real backend endpoint ──
-      const res = await fetch('http://localhost:3001/api/slots/demo', {
+      const res = await fetch('https://wager-stream-geiq.vercel.app/api/slots/demo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
